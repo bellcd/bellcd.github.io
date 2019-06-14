@@ -1,0 +1,89 @@
+/* REMOVE DEFAULT BROWSER STYLES */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVIGATION */
+nav {
+  width: 200px;
+  height: 100%;
+  /* change units when adding mobile version of nav bar? */
+  background-color: #ffffff;
+  position: fixed;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  /*  */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav ul, nav ul li:first-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* CONTENT */
+main {
+  position: relative;
+  left: 200px;
+  /* need a way to reduce the width by 200px of whatever it would have been, to accomodate the left col offset ... */
+}
+
+#intro {
+  background: url(headshot.jpg);
+  width: 500px;
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+}
+
+#intro h2 {
+  color: #fff;
+}
+
+/* SECTIONS */
+h3.section-title {
+  width: 100%;
+  background-color: blue;
+  /* probably need to change this color palette */
+}
+
+.grid-projects {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: gray;
+  margin: 10px;
+  /* to change */
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-projects {
+  width: 300px;
+}
+
+.card-image {
+  /* why is the this-one class necessary? doesn't seem like first-child selector is working properly ... */
+  width: 100%;
+  display: block;
+}
+
+.card-projects .card-details {
+  background-color: #fff;
+  padding: 20px;
+}
