@@ -34,9 +34,7 @@ nav ul, nav ul li:first-of-type {
 
 /* CONTENT */
 main {
-  position: relative;
-  left: 200px;
-  /* need a way to reduce the width by 200px of whatever it would have been, to accomodate the left col offset ... */
+  margin-left: 200px;
 }
 
 #intro {
