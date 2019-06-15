@@ -1,9 +1,9 @@
 let btn = document.getElementById('menu-btn');
-let navSections = document.getElementById('nav-sections');
+let navLi = document.getElementById('nav-li');
 btn.addEventListener('click', function() {
-  if (navSections.style.display === 'block') {
-    navSections.style.display = 'none';
+  if (navLi.style.display === 'block') {
+    navLi.style.display = 'none';
   } else {
-    navSections.style.display = 'block';
+    navLi.style.display = 'block';
   }
 });

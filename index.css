@@ -90,24 +90,17 @@ nav ul {
   align-items: center;
 }
 
-nav ul li:last-child div {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+#btn-li {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-  nav ul li:last-child div {
-    flex-direction: row;
-  }
-
-  nav ul li:last-child div a {
-    padding: 0px 10px;
+  #btn-li {
+    display: block;
   }
 }
 
-nav ul, nav ul li:first-of-type {
+#nav-li div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -115,6 +108,7 @@ nav ul, nav ul li:first-of-type {
 }
 
 ul li {
+  display: block;
   padding: 10px;
   font-size: 1.2em;
   font-weight: 200;
