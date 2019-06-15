@@ -54,9 +54,18 @@ h3.section-title {
   width: 100%;
   background-color: blue;
   /* probably need to change this color palette */
+  padding: 20px;
 }
 
+section p {
+  max-width: 700px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* CARDS */
 .grid-projects {
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
