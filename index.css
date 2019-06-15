@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, li {
   font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -34,6 +34,12 @@ nav ul, nav ul li:first-of-type {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+ul li {
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: 200;
 }
 
 /* CONTENT */
