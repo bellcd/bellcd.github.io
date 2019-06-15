@@ -68,6 +68,16 @@ nav {
   position: fixed;
 }
 
+@media only screen and (max-width: 600px) {
+  nav {
+    width: auto;
+    height: auto;
+    /* change units when adding mobile version of nav bar? */
+    background-color: rgba(242, 242, 242, 1);
+    position: static;
+  }
+}
+
 nav ul {
   list-style-type: none;
   margin-block-start: 0;
@@ -93,6 +103,7 @@ ul li {
   font-weight: 200;
 }
 
+/* NAV MENU ON PHONES */
 ul li:first-child h1 {
   /* color: rgba(20, 37, 89, 1); */
 }
@@ -100,11 +111,16 @@ ul li:first-child h1 {
 /* CONTENT */
 body {
   background-image: url(background.png);
-  background
 }
 
 main {
   margin-left: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin-left: 0px;
+  }
 }
 
 #intro {
