@@ -2,17 +2,61 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+/* ACNHOR LINK COLORS */
+/* unvisited link */
+a:link {
+  color: rgba(43, 101, 216, 1);
+}
+
+/* visited link */
+a:visited {
+  color: rgba(53, 135, 242, 1);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(133, 191, 242, 1);
+}
+
+/* selected link */
+a:active {
+  color: rgba(20, 37, 89, 1);
 }
 
 /* Color Theme Swatches in RGBA */
-.portfolio-1-rgba { color: rgba(20, 37, 89, 1); }
-.portfolio-2-rgba { color: rgba(43, 101, 216, 1); }
-.portfolio-3-rgba { color: rgba(53, 135, 242, 1); }
-.portfolio-4-rgba { color: rgba(133, 191, 242, 1); }
-.portfolio-5-rgba { color: rgba(242, 242, 242, 1); }
+.portfolio-1-rgba {
+  color: rgba(20, 37, 89, 1);
+}
 
-p, h1, h2, h3, h4, h5, h6, li {
-  font-family: 'Nunito Sans', sans-serif;
+.portfolio-2-rgba {
+  color: rgba(43, 101, 216, 1);
+}
+
+.portfolio-3-rgba {
+  color: rgba(53, 135, 242, 1);
+}
+
+.portfolio-4-rgba {
+  color: rgba(133, 191, 242, 1);
+}
+
+.portfolio-5-rgba {
+  color: rgba(242, 242, 242, 1);
+}
+
+.main-gray {
+  color: rgba(64, 64, 64, 25);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+}
+
+p, li {
+  color: rgba(64, 64, 64, 25);
 }
 
 /* NAVIGATION */
@@ -20,7 +64,7 @@ nav {
   width: 200px;
   height: 100%;
   /* change units when adding mobile version of nav bar? */
-  background-color: #ffffff;
+  background-color: rgba(242, 242, 242, 1);
   position: fixed;
 }
 
@@ -44,8 +88,13 @@ nav ul, nav ul li:first-of-type {
 }
 
 ul li {
-  padding: 10px;font-size: 1.2em;
+  padding: 10px;
+  font-size: 1.2em;
   font-weight: 200;
+}
+
+ul li:first-child h1 {
+  /* color: rgba(20, 37, 89, 1); */
 }
 
 /* CONTENT */
@@ -73,9 +122,9 @@ main {
 /* SECTIONS */
 h3.section-title {
   width: 100%;
-  background-color: blue;
-  /* probably need to change this color palette */
+  background-color: rgba(43, 101, 216, 1);
   padding: 20px;
+  color: white;
 }
 
 /* DIVIDERS */
