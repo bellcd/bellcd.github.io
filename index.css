@@ -6,6 +6,7 @@
 }
 
 /* ACNHOR LINK COLORS */
+/* change these to CSS variables? */
 /* unvisited link */
 a:link {
   color: rgba(43, 101, 216, 1);
@@ -63,18 +64,17 @@ p, li {
 nav {
   width: 200px;
   height: 100%;
-  /* change units when adding mobile version of nav bar? */
   background-color: rgba(242, 242, 242, 1);
   position: fixed;
 }
 
 @media only screen and (max-width: 600px) {
   nav {
-    width: auto;
+    width: 100%;
     height: auto;
     /* change units when adding mobile version of nav bar? */
     background-color: rgba(242, 242, 242, 1);
-    position: static;
+    position: fixed;
   }
 }
 
@@ -90,6 +90,14 @@ nav ul {
   align-items: center;
 }
 
+#header-ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* HAMBURGER MENU */
 #btn-li {
   display: none;
 }
@@ -98,13 +106,46 @@ nav ul {
   #btn-li {
     display: block;
   }
+
+  .container {
+    cursor: pointer;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .change .bar2 {
+    opacity: 0;
+  }
+
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, 8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
 }
 
+/* NAV LINKS */
 #nav-li div {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #nav-li {
+    display: none;
+  }
 }
 
 ul li {
@@ -115,17 +156,16 @@ ul li {
 }
 
 /* CONTENT */
-body {
-  background-image: url(background.png);
-}
-
 main {
   margin-left: 200px;
+  background-image: url(background.png);
 }
 
 @media only screen and (max-width: 600px) {
   main {
     margin-left: 0px;
+    padding-top: 85px;
+    /* better way to handle the fixed nav bar on mobile? */
   }
 }
 
@@ -189,7 +229,6 @@ section h4 {
 }
 
 .card-image {
-  /* why is the this-one class necessary? doesn't seem like first-child selector is working properly ... */
   width: 100%;
   display: block;
 }
