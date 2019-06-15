@@ -80,6 +80,12 @@ section h3 {
   text-transform: uppercase;
 }
 
+section h4 {
+  padding: 10px;
+  margin-left: 2em;
+  font-weight: 700;
+}
+
 /* CARDS */
 .grid-projects {
   padding: 10px;
