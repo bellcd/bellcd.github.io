@@ -6,55 +6,51 @@
 }
 
 /* GLOBAL CSS VARIABLES */
-body {
-  --mobile-max-width: 1000px;
+:root {
+  --nav-width: 200px;
+  --nav-height: 100%;
+  --nav-li-display: block;
+  --content-margin-left: 200px;
+  --content-padding-top: 0px;
+  /* colors */
+  --accent-blue: rgba(20, 37, 89, 1);
+  --dark-blue: rgba(43, 101, 216, 1);
+  --medium-blue: rgba(53, 135, 242, 1);
+  --light-blue: rgba(133, 191, 242, 1);
+  --dark-gray: rgba(64, 64, 64, 1);
+  --light-gray: rgba(242, 242, 242, 1);
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --nav-width: 100%;
+    --nav-height: auto;
+    --nav-li-display: none;
+    --content-margin-left: 0px;
+    --content-padding-top: 85px;
+    /* better way to handle the fixed nav bar on mobile? */
+  }
 }
 
 /* ACNHOR LINK COLORS */
-/* change these to CSS variables? */
 /* unvisited link */
 a:link {
-  color: rgba(43, 101, 216, 1);
+  color: var(--dark-blue);
 }
 
 /* visited link */
 a:visited {
-  color: rgba(53, 135, 242, 1);
+  color: var(--medium-blue);
 }
 
 /* mouse over link */
 a:hover {
-  color: rgba(133, 191, 242, 1);
+  color: var(--light-blue);
 }
 
 /* selected link */
 a:active {
-  color: rgba(20, 37, 89, 1);
-}
-
-/* Color Theme Swatches in RGBA */
-.portfolio-1-rgba {
-  color: rgba(20, 37, 89, 1);
-}
-
-.portfolio-2-rgba {
-  color: rgba(43, 101, 216, 1);
-}
-
-.portfolio-3-rgba {
-  color: rgba(53, 135, 242, 1);
-}
-
-.portfolio-4-rgba {
-  color: rgba(133, 191, 242, 1);
-}
-
-.portfolio-5-rgba {
-  color: rgba(242, 242, 242, 1);
-}
-
-.main-gray {
-  color: rgba(64, 64, 64, 25);
+  color: var(--accent-blue);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,25 +58,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, li {
-  color: rgba(64, 64, 64, 25);
+  color: var(--dark-gray);
 }
 
 /* NAVIGATION */
 nav {
-  width: 200px;
-  height: 100%;
+  width: var(--nav-width);
+  height: var(--nav-height);
   background-color: rgba(242, 242, 242, 1);
   position: fixed;
-}
-
-@media only screen and (max-width: var(mobile-max-width)) {
-  nav {
-    width: 100%;
-    height: auto;
-    /* change units when adding mobile version of nav bar? */
-    background-color: rgba(242, 242, 242, 1);
-    position: fixed;
-  }
 }
 
 nav ul {
@@ -107,7 +93,7 @@ nav ul {
   display: none;
 }
 
-@media only screen and (max-width: var(mobile-max-width)) {
+@media screen and (max-width: 600px) {
   #btn-li {
     display: block;
   }
@@ -147,10 +133,8 @@ nav ul {
   align-items: center;
 }
 
-@media only screen and (max-width: var(mobile-max-width)) {
-  #nav-li {
-    display: none;
-  }
+#nav-li {
+  display: var(--nav-li-display);
 }
 
 ul li {
@@ -162,16 +146,9 @@ ul li {
 
 /* CONTENT */
 main {
-  margin-left: 200px;
+  margin-left: var(--content-margin-left);
+  padding-top: var(--content-padding-top);
   background-image: url(background.png);
-}
-
-@media only screen and (max-width: var(mobile-max-width)) {
-  main {
-    margin-left: 0px;
-    padding-top: 85px;
-    /* better way to handle the fixed nav bar on mobile? */
-  }
 }
 
 #intro {
