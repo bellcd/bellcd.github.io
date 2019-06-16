@@ -15,8 +15,7 @@ menu.addEventListener('click', function() {
 let navLinks = document.getElementsByClassName('nav-links');
 for (let link of navLinks) {
   link.addEventListener('click', function() {
-    let width = Window.innerWidth;
-    if (width <= 600) {
+    if (window.innerWidth <= 600) {
       menu.classList.remove('change');
       navLi.style.display = 'none';
     }
