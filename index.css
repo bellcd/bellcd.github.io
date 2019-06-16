@@ -5,6 +5,11 @@
   font-family: 'Nunito Sans', sans-serif;
 }
 
+/* GLOBAL CSS VARIABLES */
+body {
+  --mobile-max-width: 800px;
+}
+
 /* ACNHOR LINK COLORS */
 /* change these to CSS variables? */
 /* unvisited link */
@@ -68,7 +73,7 @@ nav {
   position: fixed;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: var(mobile-max-width)) {
   nav {
     width: 100%;
     height: auto;
@@ -102,7 +107,7 @@ nav ul {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: var(mobile-max-width)) {
   #btn-li {
     display: block;
   }
@@ -142,7 +147,7 @@ nav ul {
   align-items: center;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: var(mobile-max-width)) {
   #nav-li {
     display: none;
   }
@@ -161,7 +166,7 @@ main {
   background-image: url(background.png);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: var(mobile-max-width)) {
   main {
     margin-left: 0px;
     padding-top: 85px;
