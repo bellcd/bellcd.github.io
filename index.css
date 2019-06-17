@@ -7,11 +7,12 @@
 
 /* GLOBAL CSS VARIABLES */
 :root {
+  --nav-position: fixed;
   --nav-width: 200px;
   --nav-height: 100%;
   --nav-li-display: block;
   --content-margin-left: 200px;
-  --content-padding-top: 0px;
+  --menu-ul-display: static;
   /* colors */
   --accent-blue: rgba(20, 37, 89, 1);
   --dark-blue: rgba(43, 101, 216, 1);
@@ -23,11 +24,12 @@
 
 @media screen and (max-width: 600px) {
   :root {
+    --nav-position: static;
     --nav-width: 100%;
     --nav-height: auto;
     --nav-li-display: none;
     --content-margin-left: 0px;
-    --content-padding-top: 85px;
+    --menu-ul-display: fixed;
     /* better way to handle the fixed nav bar on mobile? */
   }
 }
@@ -66,7 +68,7 @@ nav {
   width: var(--nav-width);
   height: var(--nav-height);
   background-color: rgba(242, 242, 242, 1);
-  position: fixed;
+  position: var(--nav-position);
 }
 
 nav ul {
@@ -81,21 +83,28 @@ nav ul {
   align-items: center;
 }
 
+#headshot-li img {
+  max-width: 150px;
+  height: auto;
+}
+
 #header-ul {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: space-between;
   align-items: center;
 }
 
 /* HAMBURGER MENU */
-#btn-li {
-  display: none;
+#menu-ul {
+  display: var(--menu-ul-display);
 }
 
 @media screen and (max-width: 600px) {
-  #btn-li {
+  #menu-ul {
     display: block;
+    position: fixed;
+    top: 0;
   }
 
   .container {
@@ -137,6 +146,13 @@ nav ul {
   display: var(--nav-li-display);
 }
 
+.full-screen {
+  width: 90%;
+  height: 90%;
+  background-color: red;
+  margin: 0 auto;
+}
+
 ul li {
   display: block;
   padding: 10px;
@@ -144,19 +160,16 @@ ul li {
   font-weight: 200;
 }
 
+/* HEADER */
+#header-ul {
+  display: flex;
+  flex-direction: column;
+}
+
 /* CONTENT */
 main {
   margin-left: var(--content-margin-left);
-  padding-top: var(--content-padding-top);
   background-image: url(background.png);
-}
-
-#intro {
-  background: url(headshot.jpg);
-  width: 500px;
-  height: 500px;
-  background-position: center;
-  background-size: cover;
 }
 
 #intro h2 {
