@@ -18,8 +18,11 @@
   --dark-blue: rgba(43, 101, 216, 1);
   --medium-blue: rgba(53, 135, 242, 1);
   --light-blue: rgba(133, 191, 242, 1);
-  --dark-gray: rgba(64, 64, 64, 1);
-  --light-gray: rgba(242, 242, 242, 1);
+  --gray1: #FAFAFA;
+  --gray2: #BABABA;
+  --gray3: #ADADAD;
+  --gray4: #949494;
+  --gray5: #6E6E6E;
 }
 
 @media screen and (max-width: 600px) {
@@ -60,14 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, li {
-  color: var(--dark-gray);
+  color: var(--gray5);
 }
 
 /* NAVIGATION */
 nav {
   width: var(--nav-width);
   height: var(--nav-height);
-  background-color: rgba(242, 242, 242, 1);
+  background-color: white;
   position: var(--nav-position);
 }
 
@@ -86,6 +89,10 @@ nav ul {
 #headshot-li img {
   max-width: 150px;
   height: auto;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
 #header-ul {
@@ -98,13 +105,15 @@ nav ul {
 /* HAMBURGER MENU */
 #menu-ul {
   display: var(--menu-ul-display);
+  background-color: var(--gray1);
 }
 
 @media screen and (max-width: 600px) {
   #menu-ul {
     display: block;
     position: fixed;
-    top: 0;
+    top: 10px;
+    left: 10px
   }
 
   .container {
@@ -148,9 +157,11 @@ nav ul {
 
 .full-screen {
   width: 90%;
-  height: 90%;
-  background-color: red;
+  height: auto;
   margin: 0 auto;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
 ul li {
@@ -180,13 +191,14 @@ main {
 h3.section-title {
   width: 100%;
   background-color: rgba(43, 101, 216, 1);
-  padding: 20px;
+  padding: 20px 0;
   color: white;
+  text-align: center;
 }
 
 /* DIVIDERS */
 section p {
-  max-width: 700px;
+  max-width: 100%;
   padding: 20px;
   margin: 0 auto;
 }
