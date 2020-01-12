@@ -216,7 +216,7 @@ section h4 {
 }
 
 /* CARDS */
-.grid-projects {
+.grid-apps {
   padding: 10px;
   display: flex;
   flex-direction: row;
@@ -232,9 +232,10 @@ section h4 {
   box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
-.card-projects {
+.card-apps {
   min-width: 300px;
   max-width: 500px;
+  background-color: white;
 }
 
 .card-image {
@@ -242,7 +243,7 @@ section h4 {
   display: block;
 }
 
-.card-projects .card-details {
+.card-apps .card-details {
   background-color: #fff;
   padding: 20px;
 }
