@@ -1,40 +1,35 @@
-let list = document.getElementsByClassName('container');
-let navLi = document.getElementById('nav-li');
-let menu = list[0];
-let nav = document.getElementsByTagName('nav')[0];
-let menuUl = document.getElementById('menu-ul');
+const cardApps = document.querySelectorAll('.card-apps');
+let showcased = document.querySelector('.showcased');
+const SHOWCASED = 'showcased';
+const wrapper = document.querySelector('.wrapper');
 
-menu.addEventListener('click', function() {
-  // console.log('hello!');
-  console.log(nav);
-  if (navLi.style.display === 'block') {
-    navLi.style.display = 'none';
-    menuUl.classList.toggle('full-screen');
-    menu.classList.toggle('change');
-  } else {
-    navLi.style.display = 'block';
-    menuUl.classList.toggle('full-screen');
-    menu.classList.toggle('change');
-  }
+cardApps.forEach(card => {
+  card.addEventListener('click', (event) => {
+    const classes = event.currentTarget.classList;
+    if (Array.from(classes).includes(SHOWCASED)) {
+      classes.remove(SHOWCASED);
+      wrapper.classList.remove('visible');
+      return;
+    }
+
+    removeShowcaseFromEverything();
+    addShowcase(classes);
+  })
 });
 
-let navLinks = document.getElementsByClassName('nav-links');
-for (let link of navLinks) {
-  link.addEventListener('click', function() {
-    if (window.innerWidth <= 600) {
-      menu.classList.remove('change');
-      menuUl.classList.toggle('full-screen');
-      navLi.style.display = 'none';
-    }
-  })
+const removeShowcaseFromEverything = () => {
+  cardApps.forEach(card => {
+    card.classList.remove(SHOWCASED);
+  });
+  wrapper.classList.remove('visible');
+};
+
+const addShowcase = (classes) => {
+  classes.add(SHOWCASED);
+  wrapper.classList.add('visible');
 }
 
-if (window.innerWidth >= 600) {
-  let header = document.getElementById('header-ul');
-  let sidebarHeader = header.cloneNode(true);
-  let nav = document.getElementsByTagName('nav')[0];
-
-
-  nav.insertBefore(sidebarHeader, menuUl);
-  document.getElementById('details').style.display = 'none';
-}
+window.addEventListener('keyup', (event) => {
+  if (event.code === 'Escape') removeShowcaseFromEverything();
+});
+wrapper.addEventListener('click', removeShowcaseFromEverything);
