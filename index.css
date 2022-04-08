@@ -247,6 +247,10 @@ section p {
   flex: 1 1 auto;
 }
 
+.showcased .card__showcased-container  {
+  flex: 0 1 auto;
+}
+
 .showcased img {
   height: auto;
 }
