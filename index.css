@@ -140,6 +140,10 @@ nav {
   box-shadow: 0 0 5px 4px rgb(255 255 255 / 15%);
 }
 
+.card:not(.showcased):hover {
+  cursor: pointer;
+}
+
 .card.showcased {
   justify-content: flex-start;
 }
@@ -239,6 +243,8 @@ section p {
   -webkit-box-shadow: 0 0 5px 4px rgb(255 255 255 / 15%);
   -moz-box-shadow: 0px 0px 3px 1px rgb(255, 255, 255 / 15%);
   box-shadow: 0 0 5px 4px rgb(255 255 255 / 15%);
+
+  flex: 1 1 auto;
 }
 
 .showcased img {
@@ -279,11 +285,6 @@ footer {
   align-items: center;
   border-top: 1px solid black;
   padding: var(--default-spacing);
-
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background-color: white;
 }
 
